@@ -16,8 +16,10 @@ main {
 h1{
     margin: 3rem 1rem 6rem 1rem;
 }
-img {
-    width: 50%;
+.artObject {
+    max-width: 80%;
+    max-height: 20rem;
+    margin: 1rem;
 }
 #gallery {
     display: flex;
