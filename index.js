@@ -325,4 +325,22 @@ const data = {
   }
 // my code starts here
 const paintings = data.artObjects 
-console.log(paintings)
+
+paintings.map( painting => {
+  gallery = document.getElementById('gallery')
+  a = document.createElement('a')
+  img = document.createElement('img')
+  
+
+  a.href = "./pages/detail-page.html"
+  img.src = painting.webImage.url
+  img.alt = painting.title
+  img.classList.add("artObject")
+
+  a.appendChild(img)
+  gallery.appendChild(a)
+
+  return gallery
+
+  
+})
