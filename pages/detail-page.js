@@ -35,6 +35,7 @@ function submitComment() {
     h3.innerText = `${name} said:`
     p.innerText = msg;
     comment.classList.add("comment");
+    comment.classList.add("borderBox")
     
     //appednding
     comment.appendChild(h3);
