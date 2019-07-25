@@ -1,11 +1,14 @@
 function doesNotPassAllValidations(name,msg) {
-    if (!name || !msg){
-        alert('You forgot to fill in your name or message!')
+    if (!name){
+        alert('You forgot to fill in your name!')
         return true
-    } else if (msg.length > 28){
+    } else if (!msg){
+        alert('You forgot to fill in your message!')
+        return true
+    } else if (msg.length > 50){
         alert("this is way to long! try less words")
         return true
-    } 
+    }  
     return false
     
     
@@ -15,7 +18,9 @@ function submitComment() {
     
     //getting the name and massage 
     const inputField = document.getElementById('name');
-    const name = inputField.value;
+    const name = inputField.value[0].toUpperCase() + inputField.value.slice(1);
+    
+
     
     const textareaField = document.getElementById('msg');
     const msg = textareaField.value;
